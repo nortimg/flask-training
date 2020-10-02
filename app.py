@@ -37,11 +37,6 @@ def post(post_id):
     return render_template('post.html', post=post)
 
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
-
 @app.route('/add')
 def add():
     return render_template('add.html')
