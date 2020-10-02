@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,41 +93,39 @@
             </div>
             <div class="row tm-row tm-mb-120">
                 <div class="col-12">
-                    <h2 class="tm-color-primary tm-post-title tm-mb-60">Contact Us</h2>
+                    <h2 class="tm-color-primary tm-post-title tm-mb-60">You can create a blog post here.</h2>
                 </div>
                 <div class="col-lg-7 tm-contact-left">
-                    <form method="POST" action="" class="mb-5 ml-auto mr-0 tm-contact-form">
+                    <form name="add-form" method="POST" action="{{ url_for('add_post') }}" class="mb-5 ml-auto mr-0 tm-contact-form">
                         <div class="form-group row mb-4">
-                            <label for="name" class="col-sm-3 col-form-label text-right tm-color-primary">Name</label>
+                            <label for="title" class="col-sm-3 col-form-label text-right tm-color-primary">Title</label>
                             <div class="col-sm-9">
-                                <input class="form-control mr-0 ml-auto" name="name" id="name" type="text" required>
+                                <input class="form-control mr-0 ml-auto" name="title" id="title" type="text" required>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label for="email" class="col-sm-3 col-form-label text-right tm-color-primary">Email</label>
+                            <label for="subtitle" class="col-sm-3 col-form-label text-right tm-color-primary">Subtitle</label>
                             <div class="col-sm-9">
-                                <input class="form-control mr-0 ml-auto" name="email" id="email" type="email" required>
+                                <input class="form-control mr-0 ml-auto" name="subtitle" id="subtitle" type="text" required>
                             </div>
                         </div>
                         <div class="form-group row mb-4">
-                            <label for="subject"
-                                class="col-sm-3 col-form-label text-right tm-color-primary">Subject</label>
+                            <label for="author" class="col-sm-3 col-form-label text-right tm-color-primary">Author</label>
                             <div class="col-sm-9">
-                                <input class="form-control mr-0 ml-auto" name="subject" id="subject" type="text"
-                                    required>
+                                <input class="form-control mr-0 ml-auto" name="author" id="author" type="text" required>
                             </div>
                         </div>
-                        <div class="form-group row mb-5">
-                            <label for="message"
-                                class="col-sm-3 col-form-label text-right tm-color-primary">Message</label>
+                        <div class="form-group row mb-4">
+                            <label for="content"
+                                class="col-sm-3 col-form-label text-right tm-color-primary">Content</label>
                             <div class="col-sm-9">
-                                <textarea class="form-control mr-0 ml-auto" name="message" id="message" rows="8"
+                                <textarea class="form-control mr-0 ml-auto" name="content" id="content"
                                     required></textarea>
                             </div>
                         </div>
                         <div class="form-group row text-right">
                             <div class="col-12">
-                                <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>
+                                <button class="tm-btn tm-btn-primary tm-btn-small" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>
